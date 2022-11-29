@@ -4,6 +4,10 @@ on:
  push:
  workflow_dispatch:
 
+defaults:
+ run:
+  working-directory: frontend
+
 jobs:
  build:
 
@@ -15,7 +19,6 @@ jobs:
 
    - name: Cache node modules
      uses: actions/cache@v3
-     working-directory: frontend
      env:
       cache-name: cache-node-modules
      with:
@@ -28,9 +31,7 @@ jobs:
        ${{ runner.os }}-
 
    - name: Install dependencies
-     working-directory: frontend
      run: npm i
 
    - name: Run Tests
-     working-directory: frontend
      run: npm run test:ci
