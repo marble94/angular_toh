@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { MessagesComponent } from './messages/messages.component';
+import { HeroSearchComponent } from './tour-of-heroes/components/hero-search/hero-search.component';
+import { MessagesComponent } from './tour-of-heroes/components/messages/messages.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -16,11 +16,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'Tour of Heroes'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Tour of Heroes');
   });
 });

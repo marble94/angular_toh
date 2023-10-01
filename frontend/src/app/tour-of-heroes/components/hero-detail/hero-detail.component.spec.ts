@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeroDetailComponent } from './hero-detail.component';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { HeroService } from '../hero.service';
+import { HeroService } from '../../services/hero.service';
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
